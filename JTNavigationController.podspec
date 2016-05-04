@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "JTNavigationController"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "NavigationController平滑切换页面"
   s.description      = <<-DESC
                       一个类似网易云音乐和网易新闻页面切换效果的导航控制器.
