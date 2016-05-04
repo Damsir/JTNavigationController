@@ -1,0 +1,7 @@
+platform :ios, "6.0"
+
+pod "Masonry"
+
+target :NavDemoTests, :exclusive => true do
+  # pod 'Kiwi'
+end
