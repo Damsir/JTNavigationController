@@ -10,12 +10,20 @@
 #import "Masonry.h"
 #import "AppDelegate.h"
 #import "LoginVC.h"
+#import "NavigationUtil.h"
+#import "JTNavigationController.h"
 
 @implementation MainHomeVC
 
+static NSInteger count = 0;
+
 - (void)viewDidLoad
 {
-    self.navigationItem.title = @"title";
+    self.navigationItem.title = [NSString stringWithFormat:@"title:%@", @(count++)];
+    
+    UIViewController *controller = [NavigationUtil currentVC];
+    NSLog(@"%@", controller.navigationItem.title);
+    
     
     self.view.backgroundColor = [UIColor colorWithRed:(rand()%255)/255.0 green:(rand()%255)/255.0 blue:(rand()%255)/255.0 alpha:1];
 
@@ -35,13 +43,27 @@
         make.top.equalTo(nextBtn.mas_bottom).offset(12);
     }];
     
+    UIButton *presentBtn = [self createBtn:@"present" selector:@selector(present)];
+    [self.view addSubview:presentBtn];
+    [presentBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(gobackBtn.mas_bottom).offset(12);
+    }];
+    
+    UIButton *dismissBtn = [self createBtn:@"dismiss" selector:@selector(dismiss)];
+    [self.view addSubview:dismissBtn];
+    [dismissBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(presentBtn.mas_bottom).offset(12);
+    }];
+    
 
     
     UIButton *logoffBtn = [self createBtn:@"logoff" selector:@selector(logoff)];
     [self.view addSubview:logoffBtn];
     [logoffBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
-        make.top.equalTo(gobackBtn.mas_bottom).offset(12);
+        make.top.equalTo(dismissBtn.mas_bottom).offset(12);
     }];
 }
 
@@ -56,6 +78,19 @@
 //    UINavigationController *navVC = [AppDelegate rootVC];
 //    [self.navigationController pushViewController:vc animated:YES];
     
+}
+
+- (void)present
+{
+    UIViewController *vc = [[MainHomeVC alloc] init];
+    UINavigationController *navVC = [[JTNavigationController alloc] initWithRootViewController:vc];
+    
+    [self presentViewController:navVC animated:YES completion:nil];
+}
+
+- (void)dismiss
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)goback

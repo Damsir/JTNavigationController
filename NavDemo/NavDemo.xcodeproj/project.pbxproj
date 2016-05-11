@@ -21,6 +21,7 @@
 		6B6644D41CD9AC53009F3FF7 /* backImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6644D31CD9AC53009F3FF7 /* backImage@2x.png */; };
 		6B6644DA1CD9ACFE009F3FF7 /* JTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6644D71CD9ACFE009F3FF7 /* JTNavigationController.m */; };
 		6B6644DB1CD9ACFE009F3FF7 /* UIViewController+JTNavigationExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6644D91CD9ACFE009F3FF7 /* UIViewController+JTNavigationExtension.m */; };
+		6BD47AF51CE30DF3006C772F /* NavigationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD47AF41CE30DF3006C772F /* NavigationUtil.m */; };
 		81B026CC2F008E5FF10CE49F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2FAF5CECC46A17927FD663 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,8 @@
 		6B6644D71CD9ACFE009F3FF7 /* JTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTNavigationController.m; sourceTree = "<group>"; };
 		6B6644D81CD9ACFE009F3FF7 /* UIViewController+JTNavigationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JTNavigationExtension.h"; sourceTree = "<group>"; };
 		6B6644D91CD9ACFE009F3FF7 /* UIViewController+JTNavigationExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JTNavigationExtension.m"; sourceTree = "<group>"; };
+		6BD47AF31CE30DF3006C772F /* NavigationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationUtil.h; sourceTree = "<group>"; };
+		6BD47AF41CE30DF3006C772F /* NavigationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationUtil.m; sourceTree = "<group>"; };
 		88F730F1FDF77CCEB2875249 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +139,7 @@
 			children = (
 				6B6644C01CD9988C009F3FF7 /* Assets */,
 				6B6644D51CD9ACFE009F3FF7 /* JTNavigationController */,
+				6BD47AF21CE30DE6006C772F /* Utils */,
 				6B6644B61CD99427009F3FF7 /* ViewController */,
 				6B6644861CD9935A009F3FF7 /* AppDelegate.h */,
 				6B6644871CD9935A009F3FF7 /* AppDelegate.m */,
@@ -223,6 +227,15 @@
 			);
 			name = JTNavigationController;
 			path = ../../JTNavigationController;
+			sourceTree = "<group>";
+		};
+		6BD47AF21CE30DE6006C772F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6BD47AF31CE30DF3006C772F /* NavigationUtil.h */,
+				6BD47AF41CE30DF3006C772F /* NavigationUtil.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		86A1522CFF089FEF255489C8 /* Frameworks */ = {
@@ -421,6 +434,7 @@
 				6B6644BC1CD99453009F3FF7 /* MainTabVC.m in Sources */,
 				6B6644B91CD99438009F3FF7 /* LoginVC.m in Sources */,
 				6B6644DA1CD9ACFE009F3FF7 /* JTNavigationController.m in Sources */,
+				6BD47AF51CE30DF3006C772F /* NavigationUtil.m in Sources */,
 				6B6644DB1CD9ACFE009F3FF7 /* UIViewController+JTNavigationExtension.m in Sources */,
 				6B6644851CD9935A009F3FF7 /* main.m in Sources */,
 			);
